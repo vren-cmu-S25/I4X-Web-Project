@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Auto Feeding Machine Control Center">
+  <meta name="author" content="Vincent Ren">
+  <title>Auto Feeding Machine Control Center Final</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body>
+  <header class="top-header">
+    <i id="avatar" class="avatar fa fa-user fa-2x"></i>
+    <span id="welcome-msg"> </span>
+    <a id="logout-link" style="display: none">Logout</a>
+  </header>
+  
+  <div class="container">
+    <header>
+      <img src="images/zoo-logo.png" alt="San Diego Zoo Logo" width="200px" height="200px">
+      <p>
+        <span>San Diego Zoo</span>
+        <br /> Auto Feeding Machine Control Center
+      </p>
+    </header>
+
+    <section class="main-section">
+	<div id="login-form">
+		<label for="username">User name:</label>
+		<input id="username" name="username" type="text" value=""> 
+		<p></p>
+		<label for="password">Password:</label>
+		<input id="password" name="password" type="password" value=""> 
+		<p></p>
+		<button id="login-btn">Login</button>
+		<button id="createAccPage-btn">Create Account</button>
+		<p id="login-error"></p>
+	</div>  
+	
+	<div id="create-form" style="display: none">
+		<label for="fname">First Name:</label>
+		<input id="fname" name="firstName" type="text" value=""> 
+		<p></p>
+		<label for="last">Last Name:</label>
+		<input id="lname" name="lastName" type="text" value=""> 
+		<p></p>
+		<label for="username">User name:</label>
+		<input id="username-create" name="username" type="text" value=""> 
+		<p></p>
+		<label for="password">Password:</label>
+		<input id="password-create" name="password" type="password" value=""> 
+		<p></p>
+		<label for="key">Key:</label>
+		<input id="key-create" name="key" type="password" value=""> 
+		<p></p>
+		<button id="back-to-login-btn">Back</button>
+		<button id="createAcc-btn">Create Account and Log In</button>
+		<p id="create-error"></p>
+	</div>  
+	
+	<nav id ="menu" class="main-nav" style="display: none">
+      <a id="add-btn" class="main-nav-btn">
+        <i class="fa fa-plus"></i> Add Machine
+      </a>
+      <a id="log-btn" class="main-nav-btn">
+        <i class="fa fa-file"></i> Download Log
+      </a>
+      <a id="key-btn" class="main-nav-btn">
+        <i class="fa fa-key"></i> Generate Key
+      </a>
+    </nav>
+    
+	<div id="add-form" style="display: none">
+		<label for="name">Name:</label>
+		<input id="name" name="name" type="text" placeholder="Cuuute Name"> 
+		<p></p>
+		<label for="ip">IP Address:</label>
+		<input id="ip" name="ip" type="text" placeholder="111.222.333.444"> 
+		<p></p>
+		<label for="hr">Feed Time (hour):</label>
+		<input id="hr" name="hr" type="text" placeholder="In 24 Hour (0~23)"> 
+		<p></p>
+		<label for="min">Feed Time (minute):</label>
+		<input id="min" name="min" type="text" placeholder="(0~59)"> 
+		<p></p>
+		<button id="add-back-to-Home-btn">Back</button>
+		<button id="add-machine-btn">Register Machine</button>
+		<p id="add-error"></p>
+	</div> 
+      
+	<ul id="item-list" style="display: none">
+        <li class="item">
+          <div>
+            <a class="item-name">Example</a>
+            <p class="item-ip">127.10.0.1</p>
+          </div>
+          <p class="item-time">22:12</p>
+          <div class="action-link">
+            <i class="fa fa-toggle-off"></i>
+          </div>
+          <div class="action-link">
+            <i class="fa fa-trash"></i>
+          </div>
+        </li>
+      </ul>	
+      
+      <div id="logDropDown" style="display: none">
+      	<button id="log-back-to-Home-btn">Back</button>
+      	<p class="dropdownEle">Log saves up to 7 days</p>
+      	<button id="download-btn">download</button>
+      	<select id="dateDropDown" class="dropdownEle">
+		</select>
+      </div>
+    </section>
+  </div>
+  
+  <footer>
+    <p class="title">San Diego Zoo x UC San Diego</p>
+    <ul>
+      <li>
+        <p><i class="fa fa-map-o fa-2x"></i></p>
+        <p>San Diego Zoo, CA</p>
+      </li>
+      <li>
+        <p><i class="fa fa-envelope-o fa-2x"></i></p>
+        <p>zoo_email_goes_here@sandiegozoo.com</p>
+      </li>
+      <li>
+        <p><i class="fa fa-phone fa-2x"></i></p>
+        <p>+1 619-718-3000</p>
+      </li>
+    </ul>
+    <p>Developed by</p>
+    <p>UC San Diego Innovation & Design Lab I4X Project Team</p>
+    <p>Vincent Ren</p>
+  </footer>
+  
+  <script src="scripts/index.js"></script>
+</body>
+</html>
